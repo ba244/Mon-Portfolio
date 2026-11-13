@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abdoulaye BA – Portfolio Science des Données</title>
+<meta name="description" content="Portfolio d'Abdoulaye BA, étudiant en BUT Science des Données à l'IUT Grand Ouest Normandie, en recherche de stage.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+</header>
+
+<main>
+<section id="accueil" class="hero">
+  <p class="eyebrow">BUT Science des Données · 2e année · 2026–2027</p>
+  <h1>Abdoulaye BA</h1>
+  <p class="lead">Étudiant en deuxième année de BUT Science des Données à l'IUT Grand Ouest Normandie (Université de Caen Normandie), à la recherche d'un <strong>stage</strong>. Je transforme des données brutes en analyses claires et exploitables.</p>
+  <div class="cta"><a class="btn" href="#projets">Voir mes réalisations</a><a class="btn ghost" href="#contact">Me contacter</a></div>
+</section>
+
+<section id="projets">
+  <h2>Mes réalisations</h2>
+  <p class="note">Projets réalisés en première année de BUT (2025–2026).</p>
+  <div class="filters">
+    <button class="chip active" data-f="all">Tous</button><button class="chip" data-f="bdd">Base de données</button><button class="chip" data-f="stats">Statistiques</button><button class="chip" data-f="dataviz">Datavisualisation</button>
+  </div>
+  <article class="sae" data-c="bdd">
+    <header><span class="tag">SAÉ </span><h3>Conception & implémentation d’une base de données</h3></header>
+    <div class="sae-grid">
+
+      <div class="sae-text">
+        <h4>Présentation du projet</h4>
+        <p>L’objectif de ce projet était de nettoyer et structurer des données
+           sur les Jeux olympiques d’été et d’hiver, ainsi que des indicateurs 
+           économiques et statistiques par pays (PIB, statistiques générales), 
+           afin de les rendre exploitables pour une analyse. Il s’agissait de 
+           passer de fichiers CSV bruts, hétérogènes et incomplets, à un jeu de 
+           données fiable et organisé dans une base de données relationnelle.</p>
+        <h4>Organisation</h4><ul class="org"><li><b>Modalités :</b> Travail de groupe (4), 
+          binôme</li><li><b>Suivi :</b> Réunion hebdomadaire</li><li><b>Ressources :</b> 
+            Cours de base de données, documentation pandas, recherches internet</li>
+            <li><b>Outils :</b> SQL, Python (pandas, NumPy)</li><li><b>Livrables :</b> 
+              Fichier Python (.py), rapport (LaTeX)</li></ul>
+        <h4>Démarche et résolution du problème</h4>
+        <p>Pour mener à bien ce projet, j’ai d’abord exploré les quatre fichiers CSV 
+          fournis (Jeux olympiques d’été et d’hiver, PIB par pays, statistiques des pays 
+          du monde) pour identifier les informations disponibles et les liens possibles 
+          entre eux. J’ai ensuite conçu le modèle conceptuel de données présenté ci-dessus, 
+          qui compte sept entités (<em>Pays</em>, <em>Région</em>, 
+          <em>Sportif</em>, <em>Épreuve</em>, <em>Discipline</em>, <em>Sport</em>, 
+          <em>Édition</em>) reliées par cinq associations. La hiérarchie 
+          sport → discipline → épreuve évite les répétitions et garantit la cohérence 
+          des données. Enfin, j’ai programmé en Python (pandas) un nettoyage en cinq 
+          étapes : types, valeurs manquantes, doublons, incohérences et valeurs aberrantes. 
+          J’ai ensuite importé les données dans une base SQLite et les ai interrogées en SQL.</p>
+              <figure><img src="images/sae201-mcdgithub.png" alt="Modèle conceptuel de données des Jeux olympiques" loading="lazy"></figure>
+        <h4>Acquis</h4>
+        <p>Ce projet m’a permis de consolider ma maîtrise de pandas pour le nettoyage 
+          et la préparation de données. J’ai appris à identifier les différents types de
+           défauts d’un jeu de données et à choisir un traitement adapté. J’ai aussi 
+           compris l’importance de la qualité des données avant toute analyse. J’ai découvert la conception d’un modèle de données et le langage SQL.</p>
+      </div>
+    </div>
+  </article>
+  <article class="sae" data-c="stats">
+    <header><span class="tag">SAÉ </span><h3>Estimation par sondage simple</h3></header>
+    <div class="sae-grid">
+     
+      <div class="sae-text">
+        <h4>Présentation du projet</h4>
+        <p>L’objectif de ce projet était de maîtriser les outils de la 
+          <strong>statistique inférentielle</strong> pour tirer des conclusions sur 
+          une population globale à partir d’échantillons restreints. Il s’agissait 
+          d’utiliser le logiciel <strong>SAS</strong> pour automatiser le calcul 
+          d’indicateurs de précision (intervalles de confiance) et valider des 
+          hypothèses sur la distribution des données (tests de normalité).</p>
+        <h4>Organisation</h4><ul class="org"><li><b>Modalités :</b> Travail 
+          en binôme</li><li><b>Suivi :</b> Réunion hebdomadaire</li>
+          <li><b>Ressources :</b> Statistique inférentielle, TP analyse statistique,
+             recherches internet</li><li><b>Outils :</b> RStudio, LaTeX, SAS</li>
+             <li><b>Livrables :</b> Rapport (LaTeX)</li></ul>
+        <h4>Démarche et résolution du problème</h4>
+        <p>Pour mener à bien ce projet, j’ai structuré mon travail autour d’une 
+          chaîne de traitement de données rigoureuse sous SAS, en débutant par une 
+          phase essentielle de préparation et de nettoyage des données via l’étape 
+          DATA pour transformer les variables brutes en indicateurs exploitables. 
+          J’ai ensuite approfondi l’analyse par un diagnostic de distribution 
+          complet avec la procédure PROC UNIVARIATE, en m’appuyant sur des outils 
+          visuels tels que le QQ-Plot pour valider rigoureusement l’hypothèse de 
+          normalité avant toute interprétation statistique. Une fois cette 
+          conformité établie, j’ai appliqué les principes fondamentaux de la 
+          statistique inférentielle à travers les procédures MEANS et FREQ pour 
+          calculer des intervalles de confiance à 95 %, ce qui a permis de 
+          généraliser avec précision les caractéristiques de l’échantillon à 
+          l’ensemble de la population. Enfin, j’ai enrichi l’étude en simulant 
+          différentes tailles d’échantillons afin de démontrer visuellement la 
+          convergence des estimateurs, prouvant ainsi que l’accroissement du volume
+           de données réduit significativement les marges d’erreur et renforce la 
+           fiabilité des conclusions pour la prise de décision.</p>
+            <figure><img src="images/sae202-histogrammegithub.png" alt="Histogramme de la répartition des élèves selon l'âge" loading="lazy"></figure>
+        <h4>Acquis</h4>
+        <p>Ce projet m’a permis de consolider des compétences techniques et analytiques
+           essentielles en science des données, à commencer par la maîtrise de la 
+           programmation SAS pour le nettoyage, la manipulation et l’automatisation de 
+           rapports statistiques via les sorties ODS. J’ai acquis une solide rigueur 
+           méthodologique dans l’application des tests d’hypothèses, apprenant à 
+           diagnostiquer la normalité d’une distribution et à choisir les outils 
+           d’inférence adaptés selon la nature des données. La manipulation des 
+           procédures UNIVARIATE, MEANS et FREQ m’a permis de devenir autonome dans 
+           le calcul d’intervalles de confiance et l’estimation de paramètres de 
+           population. Enfin, cette expérience a renforcé ma capacité d’analyse 
+           critique, notamment à travers la compréhension concrète de la convergence 
+           des estimateurs et de l’influence de la taille d’un échantillon sur la 
+           précision et la fiabilité des décisions statistiques.</p>
+      </div>
+    </div>
+  </article>
+  <article class="sae" data-c="stats">
+    <header><span class="tag">SAÉ </span><h3>Régression sur données réelles</h3></header>
+    <div class="sae-grid">
+      
+      <div class="sae-text">
+        <h4>Présentation du projet</h4>
+        <p>L’objectif de ce projet était d’exploiter les données issues d’un radar de
+           golf (Garmin) pour modéliser et prédire la distance parcourue par une balle
+            en fonction de différents paramètres techniques. Ce travail s’inscrit dans
+             une démarche d’optimisation de la performance sportive par l’analyse de 
+             données réelles, en utilisant des modèles de régression pour identifier 
+             les facteurs clés de succès d’un coup de golf.</p>
+        <h4>Organisation</h4><ul class="org"><li><b>Modalité :</b> Travail de 
+          groupe (4)</li><li><b>Suivi :</b> Réunion hebdomadaire</li>
+          <li><b>Ressources :</b> Cours statistique, TP analyse statistique, 
+            recherches internet</li><li><b>Outils d’analyse :</b> RStudio, LaTeX</li>
+            <li><b>Livrables :</b> Rapport (LaTeX), présentation orale</li></ul>
+        <h4>Démarche et résolution du problème</h4>
+        <p>Pour mener à bien ce projet, j’ai structuré mon travail autour d’une 
+          démarche de modélisation prédictive en commençant par une phase 
+          d’exploration et de nettoyage des données techniques telles que la vitesse 
+          du club, l’angle d’envol et la vitesse de rotation (spin rate). J’ai 
+          ensuite procédé à une analyse de corrélation pour identifier les variables 
+          ayant le plus d’impact sur la distance totale, ce qui m’a permis de 
+          sélectionner les prédicteurs les plus pertinents pour construire un modèle 
+          de régression linéaire. À l’aide d’outils statistiques, j’ai ajusté le 
+          modèle et vérifié la validité des résidus pour m’assurer de la fiabilité 
+          des prédictions, tout en interprétant le coefficient de détermination (R²) 
+          pour mesurer la qualité de l’ajustement. Enfin, j’ai utilisé ce modèle pour 
+          simuler différents scénarios de frappe, démontrant ainsi comment de légères 
+          variations de l’angle d’envol ou du « Smash Factor » influencent directement
+           la performance finale, offrant ainsi des préconisations concrètes pour 
+           l’entraînement du joueur.</p>
+           <figure><img src="images/sae203-regressiongithub.png" alt="Régression entre distance carry et backspin" loading="lazy"></figure>
+        <h4>Acquis</h4>
+        <p>Ce projet m’a permis de maîtriser la modélisation par régression linéaire,
+           de la sélection des variables pertinentes à l’interprétation des 
+           coefficients. J’ai développé une solide capacité à diagnostiquer la 
+           fiabilité d’un modèle via l’analyse des résidus et à traduire des 
+           données techniques complexes en leviers de performance concrets. Enfin, 
+           j’ai renforcé ma rigueur dans le traitement de données réelles et ma 
+           compétence à communiquer des résultats statistiques de manière 
+           actionnable pour un utilisateur final.</p>
+      </div>
+    </div>
+  </article>
+  <article class="sae" data-c="dataviz">
+    <header><span class="tag">SAÉ  Data challenge</span><h3>Datavisualisation (challenge)</h3></header>
+    <div class="sae-grid">
+      
+        <p><button class="link" data-zoom="images/sae204-poster.jpg">Voir le poster de restitution →</button></p></figure>
+      <div class="sae-text">
+        <h4>Présentation du projet</h4>
+        <p>L’objectif de ce challenge de datavisualisation était d’analyser et de 
+          valoriser des données démographiques complexes issues des recensements de 
+          la population et de l’état civil de l’INSEE. Il s’agissait d’explorer 
+          l’évolution de la population communale, les dynamiques du solde naturel et
+           migratoire (entre 2016 et 2022), ainsi que la structure par âge et la 
+           typologie rural/urbain. En équipe, notre mission était de transformer ces 
+           données brutes en un rapport percutant et en visualisations interactives 
+           pour restituer les contrastes territoriaux français.</p>
+        <h4>Organisation</h4><ul class="org"><li><b>Modalités :</b> Travail de 
+          groupe (4), binôme</li><li><b>Suivi :</b> Réunion journée</li>
+          <li><b>Ressources :</b> Statistique descriptive, probabilités, base 
+            de données ; cours SAÉ ; recherches internet</li><li><b>Outils :</b> 
+              Excel, Power BI (Power Query, Dashboard)</li><li><b>Livrables :</b> 
+                Rapport d’analyse, scripts de traitement, poster de restitution, 
+                présentation orale (10 min)</li></ul>
+        <h4>Démarche et résolution du problème</h4>
+        <p>Pour mener à bien ce challenge, nous avons commencé par une phase 
+          rigoureuse de manipulation et de fusion des différents fichiers de données
+           à notre disposition (COM_naissances_décès, COM_AGE_2016, COM_AGE_2022 et
+            COM_rural_urbain). À l’aide de Python et de R, nous avons structuré les 
+            indicateurs clés pour comparer les dynamiques démographiques selon le 
+            degré de densité des territoires. Nous avons ensuite conçu des 
+            visualisations graphiques avancées pour mettre en évidence les contrastes
+             entre zones rurales et urbaines, analyser l’impact du solde naturel 
+             (naissances versus décès) et observer le vieillissement de la population 
+             à travers les différentes classes d’âge. Enfin, nous avons synthétisé 
+             l’ensemble de ces analyses au sein d’un dashboard interactif et d’un 
+             poster visuel, permettant de rendre l’information immédiatement 
+             compréhensible pour un public non expert tout en conservant une totale 
+             rigueur statistique.</p>
+             <figure><img src="images/sae204-postergithub.jpg" alt="Illustration d'un tableau de bord démographique" loading="lazy">
+        <h4>Acquis</h4>
+        <p>Ce projet m’a permis de consolider mes compétences en datavisualisation et 
+          en storytelling visuel. J’ai appris à concevoir des graphiques adaptés à des 
+          volumes de données géographiques importants et à structurer un tableau de 
+          bord percutant. J’ai également renforcé mon aptitude à travailler en équipe 
+          sur un projet transversal, de la manipulation initiale des données sous 
+          Python/R jusqu’à la restitution orale et graphique des résultats.</p>
+      </div>
+    </div>
+  </article>
+  <article class="sae" data-c="dataviz">
+    <header><span class="tag">SAÉ </span><h3>Analyse de données, reporting et datavisualisation</h3></header>
+    <div class="sae-grid">
+      
+      <div class="sae-text">
+        <h4>Présentation du projet</h4>
+        <p>L’objectif de ce projet était de mener une étude statistique approfondie 
+          sur plus de 435 000 vols au départ des trois grands aéroports de New York 
+          (JFK, LGA, EWR). En tant qu’analyste de données, ma mission consistait à 
+          identifier les causes majeures des retards et des annulations de vols sur 
+          l’année 2023 afin de fournir des recommandations stratégiques au consortium 
+          aéroportuaire.</p>
+        <h4>Organisation</h4><ul class="org"><li><b>Modalités :</b> Travail de 
+          groupe (4), binôme</li><li><b>Suivi :</b> Réunion hebdomadaire</li>
+          <li><b>Ressources :</b> Statistique descriptive ; cours SAÉ ; recherches 
+            internet</li><li><b>Outils :</b> RStudio, LaTeX, Marp</li><
+            li><b>Livrables :</b> Rapport (LaTeX), présentation orale</li></ul>
+        <h4>Démarche et résolution du problème</h4>
+        <p>Pour mener à bien ce projet, j’ai structuré mon travail autour d’un flux 
+          complet d’analyse de données en commençant par une phase cruciale de 
+          nettoyage et de préparation du fichier nycflights2023.txt pour traiter 
+          les valeurs manquantes et harmoniser les formats temporels. J’ai ensuite 
+          exploré les facteurs influençant les délais, tels que la saisonnalité, 
+          l’impact des transporteurs et les distances de vol, en utilisant des 
+          indicateurs d’association pour quantifier les relations entre ces variables.
+           Pour chaque problématique soulevée par la direction, j’ai conçu des 
+           visualisations de données adaptées, allant de l’analyse des retards au 
+           départ à l’étude des taux d’annulation par destination, tout en veillant à 
+           la rigueur de l’interprétation statistique. Enfin, j’ai synthétisé ces 
+           résultats dans un rapport d’analyse professionnel, transformant des 
+           données brutes massives en informations visuelles et textuelles 
+           exploitables pour améliorer la gestion du trafic et l’expérience des 
+           passagers.</p>
+           <figure><img src="images/sae205-barresgithub.png" alt="Diagramme en barres empilées en pourcentages" loading="lazy"></figure>
+        <h4>Acquis</h4>
+        <p>Ce projet m’a permis de maîtriser la manipulation de bases de données 
+          volumineuses (Big Data) et de perfectionner mes techniques de 
+          « Data Wrangling » pour assurer la qualité des analyses. J’ai développé une 
+          expertise avancée en datavisualisation, apprenant à choisir le graphique le 
+          plus pertinent pour traduire un indicateur d’association complexe en message 
+          clair. J’ai également renforcé ma capacité de reporting et de communication
+           de données, en apprenant à adapter mon discours technique aux besoins d’une 
+           direction décisionnaire. Enfin, cette expérience a consolidé ma rigueur 
+           analytique dans l’interprétation des phénomènes de retards et d’annulations,
+            des compétences clés pour tout rôle de Data Analyst en environnement 
+            opérationnel.</p>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section id="competences">
+  <h2>Compétences</h2>
+  <div class="skills">
+    <div><h3>Langages &amp; outils</h3><p>R · Python (pandas, NumPy) · SQL / SQLite · SAS · Power BI · Excel · LaTeX · Marp</p></div>
+    <div><h3>Analyse</h3><p>Statistique descriptive et inférentielle · Probabilités · Régression linéaire · Intervalles de confiance</p></div>
+    <div><h3>Communication</h3><p>Rapports, posters, présentations orales · Dashboards · Travail en équipe</p></div>
+  </div>
+</section>
+
+
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Je recherche un stage en science des données. N'hésitez pas à me contacter.</p>
+  <div class="cta">
+    <a class="btn" href="mailto:votre.email@exemple.fr">baabdoulaye446@gmail.com</a>
+    <p> 07 44 12 74 82 </p>
+  </div>
+</section>
+</main>
+
+<footer>© <span id="year"></span> Abdoulaye BA · BUT Science des Données (2e année) – IUT Grand Ouest Normandie</footer>
+<div class="lightbox" id="lightbox" hidden><img alt="Poster de la SAÉ 2.04"></div>
+<script src="script.js"></script>
+</body>
+</html>
