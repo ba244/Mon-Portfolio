@@ -32,13 +32,32 @@ function openZoom(src, alt) {
   boxImg.alt = alt || '';
   box.hidden = false;
 }
+// Si une image est introuvable, essaie l'autre nom de fichier (avec ou sans "github")
+function otherName(src) {
+  return /github\.\w+$/i.test(src)
+    ? src.replace(/github(\.\w+)$/i, '$1')
+    : src.replace(/(\.\w+)$/, 'github$1');
+}
+document.querySelectorAll('.sae figure img').forEach(img => {
+  img.addEventListener('error', () => {
+    if (img.dataset.retry) return;
+    img.dataset.retry = '1';
+    img.removeAttribute('loading');
+    img.src = otherName(img.getAttribute('src'));
+  });
+  if (img.complete && img.naturalWidth === 0) img.dispatchEvent(new Event('error'));
+});
+
 document.querySelectorAll('.sae figure img').forEach(img => {
   img.tabIndex = 0;
   img.addEventListener('click', () => openZoom(img.src, img.alt));
   img.addEventListener('keydown', e => { if (e.key === 'Enter') openZoom(img.src, img.alt); });
 });
 document.querySelectorAll('[data-zoom]').forEach(b =>
-  b.addEventListener('click', () => openZoom(b.dataset.zoom, 'Poster de la SAÉ 2.04')));
+  b.addEventListener('click', () => {
+    const poster = document.querySelector('.sae figure img[src*="sae204"]');
+    openZoom(poster ? poster.src : b.dataset.zoom, 'Poster de la SAÉ 2.04');
+  }));
 box.addEventListener('click', () => (box.hidden = true));
 document.addEventListener('keydown', e => { if (e.key === 'Escape') box.hidden = true; });
 
