@@ -5,18 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Abdoulaye BA – Portfolio Science des Données</title>
 <meta name="description" content="Portfolio d'Abdoulaye BA, étudiant en BUT Science des Données à l'IUT Grand Ouest Normandie, en recherche de stage.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<header class="nav">
+  <a class="logo" href="#accueil">Abdoulaye BA</a>
+  <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">☰</button>
+  <nav id="menu">
+    <a href="#accueil">Accueil</a><a href="#projets">Réalisations</a><a href="#competences">Compétences</a><a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <main>
 <section id="accueil" class="hero">
+  <div class="hero-text">
   <p class="eyebrow">BUT Science des Données · 2e année · 2026–2027</p>
   <h1>Abdoulaye BA</h1>
   <p class="lead">Étudiant en deuxième année de BUT Science des Données à l'IUT Grand Ouest Normandie (Université de Caen Normandie), à la recherche d'un <strong>stage</strong>. Je transforme des données brutes en analyses claires et exploitables.</p>
   <div class="cta"><a class="btn" href="#projets">Voir mes réalisations</a><a class="btn ghost" href="#contact">Me contacter</a></div>
+  </div>
+  <svg class="chart" viewBox="0 0 240 160" aria-hidden="true"><g><rect x="14" y="110" width="26" height="30"/><rect x="48" y="84" width="26" height="56"/><rect x="82" y="46" width="26" height="94"/><rect x="116" y="20" width="26" height="120"/><rect x="150" y="52" width="26" height="88"/><rect x="184" y="92" width="26" height="48"/></g><line x1="6" y1="140" x2="226" y2="140"/></svg>
 </section>
 
 <section id="projets">
@@ -54,7 +66,7 @@
           des données. Enfin, j’ai programmé en Python (pandas) un nettoyage en cinq 
           étapes : types, valeurs manquantes, doublons, incohérences et valeurs aberrantes. 
           J’ai ensuite importé les données dans une base SQLite et les ai interrogées en SQL.</p>
-              <figure><img src="images/sae201-mcd.png" alt="Modèle conceptuel de données des Jeux olympiques" loading="lazy"></figure>
+              <figure><img src="images/images:sae201-mcd.png" alt="Modèle conceptuel de données des Jeux olympiques" loading="lazy"></figure>
         <h4>Acquis</h4>
         <p>Ce projet m’a permis de consolider ma maîtrise de pandas pour le nettoyage 
           et la préparation de données. J’ai appris à identifier les différents types de
@@ -98,7 +110,7 @@
           convergence des estimateurs, prouvant ainsi que l’accroissement du volume
            de données réduit significativement les marges d’erreur et renforce la 
            fiabilité des conclusions pour la prise de décision.</p>
-            <figure><img src="images/sae202-histogramme.png" alt="Histogramme de la répartition des élèves selon l'âge" loading="lazy"></figure>
+            <figure><img src="images/images:sae202-histogramme.png" alt="Histogramme de la répartition des élèves selon l'âge" loading="lazy"></figure>
         <h4>Acquis</h4>
         <p>Ce projet m’a permis de consolider des compétences techniques et analytiques
            essentielles en science des données, à commencer par la maîtrise de la 
@@ -149,7 +161,7 @@
           variations de l’angle d’envol ou du « Smash Factor » influencent directement
            la performance finale, offrant ainsi des préconisations concrètes pour 
            l’entraînement du joueur.</p>
-           <figure><img src="images/sae203-regression.png" alt="Régression entre distance carry et backspin" loading="lazy"></figure>
+           <figure><img src="images/images:sae203-regression.png" alt="Régression entre distance carry et backspin" loading="lazy"></figure>
         <h4>Acquis</h4>
         <p>Ce projet m’a permis de maîtriser la modélisation par régression linéaire,
            de la sélection des variables pertinentes à l’interprétation des 
@@ -166,7 +178,7 @@
     <header><span class="tag">SAÉ  Data challenge</span><h3>Datavisualisation (challenge)</h3></header>
     <div class="sae-grid">
       
-        <p><button class="link" data-zoom="images/sae204-poster.jpg">Voir le poster de restitution →</button></p></figure>
+        <p><button class="link" data-zoom="images/sae204-poster.jpg">Voir le poster de restitution →</button></p>
       <div class="sae-text">
         <h4>Présentation du projet</h4>
         <p>L’objectif de ce challenge de datavisualisation était d’analyser et de 
@@ -199,7 +211,7 @@
              poster visuel, permettant de rendre l’information immédiatement 
              compréhensible pour un public non expert tout en conservant une totale 
              rigueur statistique.</p>
-             <figure><img src="images/sae204-poster.jpg" alt="Illustration d'un tableau de bord démographique" loading="lazy">
+             <figure><img src="images/images:sae204-poster.jpg" alt="Illustration d'un tableau de bord démographique" loading="lazy"></figure>
         <h4>Acquis</h4>
         <p>Ce projet m’a permis de consolider mes compétences en datavisualisation et 
           en storytelling visuel. J’ai appris à concevoir des graphiques adaptés à des 
@@ -225,8 +237,7 @@
         <h4>Organisation</h4><ul class="org"><li><b>Modalités :</b> Travail de 
           groupe (4), binôme</li><li><b>Suivi :</b> Réunion hebdomadaire</li>
           <li><b>Ressources :</b> Statistique descriptive ; cours SAÉ ; recherches 
-            internet</li><li><b>Outils :</b> RStudio, LaTeX, Marp</li><
-            li><b>Livrables :</b> Rapport (LaTeX), présentation orale</li></ul>
+            internet</li><li><b>Outils :</b> RStudio, LaTeX, Marp</li><li><b>Livrables :</b> Rapport (LaTeX), présentation orale</li></ul>
         <h4>Démarche et résolution du problème</h4>
         <p>Pour mener à bien ce projet, j’ai structuré mon travail autour d’un flux 
           complet d’analyse de données en commençant par une phase cruciale de 
@@ -243,7 +254,7 @@
            données brutes massives en informations visuelles et textuelles 
            exploitables pour améliorer la gestion du trafic et l’expérience des 
            passagers.</p>
-           <figure><img src="images/sae205-barres.png" alt="Diagramme en barres empilées en pourcentages" loading="lazy"></figure>
+           <figure><img src="images/images:sae205-barres.png" alt="Diagramme en barres empilées en pourcentages" loading="lazy"></figure>
         <h4>Acquis</h4>
         <p>Ce projet m’a permis de maîtriser la manipulation de bases de données 
           volumineuses (Big Data) et de perfectionner mes techniques de 
@@ -264,7 +275,7 @@
 <section id="competences">
   <h2>Compétences</h2>
   <div class="skills">
-    <div><h3>Langages &amp; outils</h3><p>R · Python (pandas, NumPy) · SQL / SQLite · SAS · Power BI · Excel · LaTeX · Marp</p></div>
+    <div><h3>Langages &amp; outils</h3><p>R · Python (pandas, NumPy) · SQL / SQLite · SAS · Power BI(Dashboard, Power Query) · Excel(Power Pivot, Power Query) · LaTeX · Marp</p></div>
     <div><h3>Analyse</h3><p>Statistique descriptive et inférentielle · Probabilités · Régression linéaire · Intervalles de confiance</p></div>
     <div><h3>Communication</h3><p>Rapports, posters, présentations orales · Dashboards · Travail en équipe</p></div>
   </div>
@@ -276,8 +287,8 @@
   <h2>Contact</h2>
   <p>Je recherche un stage en science des données. N'hésitez pas à me contacter.</p>
   <div class="cta">
-    <a class="btn" href="mailto:votre.email@exemple.fr">baabdoulaye446@gmail.com</a>
-    <p> 07 44 12 74 82 </p>
+    <a class="btn" href="mailto:baabdoulaye446@gmail.com">baabdoulaye446@gmail.com</a>
+    <p><a href="tel:+33744127482">07 44 12 74 82</a></p>
   </div>
 </section>
 </main>
